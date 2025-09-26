@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DemoShop - Online Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">🛍️ DemoShop</h1>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#products">Products</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒 <span id="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Welcome to DemoShop</h2>
+            <p>Quality Products at Amazing Prices</p>
+            <button class="cta-button" onclick="scrollToProducts()">Start Shopping</button>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=200&fit=crop" alt="Headphones">
+                <h3>Wireless Headphones</h3>
+                <p class="price">$79.99</p>
+                <p class="description">High-quality wireless headphones with noise cancellation</p>
+                <button class="add-to-cart" onclick="addToCart('Wireless Headphones', 79.99)">Add to Cart</button>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=300&h=200&fit=crop" alt="Smart Watch">
+                <h3>Smart Watch</h3>
+                <p class="price">$199.99</p>
+                <p class="description">Feature-rich smartwatch with health monitoring</p>
+                <button class="add-to-cart" onclick="addToCart('Smart Watch', 199.99)">Add to Cart</button>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=300&h=200&fit=crop" alt="Smartphone">
+                <h3>Smartphone</h3>
+                <p class="price">$599.99</p>
+                <p class="description">Latest smartphone with advanced camera system</p>
+                <button class="add-to-cart" onclick="addToCart('Smartphone', 599.99)">Add to Cart</button>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&h=200&fit=crop" alt="Laptop">
+                <h3>Laptop</h3>
+                <p class="price">$899.99</p>
+                <p class="description">Powerful laptop for work and entertainment</p>
+                <button class="add-to-cart" onclick="addToCart('Laptop', 899.99)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>🛒 Your Shopping Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will appear here -->
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-total">
+            <p>Total: $<span id="cart-total">0.00</span></p>
+            <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
